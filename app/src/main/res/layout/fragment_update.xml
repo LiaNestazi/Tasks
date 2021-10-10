@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.view.UpdateFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/upd_task_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/enter_name"
+                android:hint="@string/enter_name"
+                android:inputType="text"
+                android:textColor="@color/dark_blue"
+                android:textColorHint="@color/dark_blue"
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/upd_task_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/enter_desc"
+
+                android:hint="@string/enter_desc"
+                android:inputType="text"
+
+                android:textColor="@color/dark_blue"
+                android:textColorHint="@color/dark_blue"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/upd_task_creator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/enter_creator"
+
+                android:hint="@string/enter_creator"
+                android:inputType="text"
+
+                android:textColor="@color/dark_blue"
+                android:textColorHint="@color/dark_blue"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/upd_task_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/enter_time"
+
+                android:hint="@string/enter_time"
+                android:inputType="text"
+
+                android:textColor="@color/dark_blue"
+                android:textColorHint="@color/dark_blue"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/button_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/main_blue"
+            android:text="@string/add" />
+    </LinearLayout>
+</ScrollView>

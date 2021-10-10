@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/TaskListFragment">
+
+    <fragment
+        android:id="@+id/TaskListFragment"
+        android:name="com.mycompany.tasks.presentation.view.TaskListFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_task_list">
+
+        <action
+            android:id="@+id/action_TaskListFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_TaskListFragment_to_AddTaskFragment"
+            app:destination="@id/AddTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AddTaskFragment"
+        android:name="com.mycompany.tasks.presentation.view.AddTaskFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_add_task">
+        <action
+            android:id="@+id/action_AddTaskFragment_to_TaskListFragment"
+            app:destination="@id/TaskListFragment" />
+        <action
+            android:id="@+id/action_AddTaskFragment_to_phoneBookFragment"
+            app:destination="@id/phoneBookFragment" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="Создатель задачи" />
+        <argument
+            android:name="phone"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="Номер телефона" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.mycompany.tasks.presentation.view.UpdateFragment"
+        android:label="@string/update_fragment_label"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_TaskListFragment3"
+            app:destination="@id/TaskListFragment" />
+        <argument
+            android:name="currentTask"
+            app:argType="com.mycompany.tasks.presentation.repository.dto.TaskDto" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneBookFragment"
+        android:name="com.mycompany.tasks.presentation.view.PhoneBookFragment"
+        android:label="@string/choose_contact_fragment_label"
+        tools:layout="@layout/fragment_phone_book" >
+        <action
+            android:id="@+id/action_phoneBookFragment_to_AddTaskFragment"
+            app:destination="@id/AddTaskFragment" />
+    </fragment>
+</navigation>
